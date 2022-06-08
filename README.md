@@ -41,6 +41,6 @@ In your .php-files you type
 
 ```php
 
-<?= hs('json_key') ?>
+<?= hs('json_key_here') ?>
 
 ```
