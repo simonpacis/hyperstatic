@@ -9,8 +9,10 @@ Outputs .html files.
 ### Setup
 Have the following folder structure in your project directory:
 
+```
 dist/
 src/
+```
 
 In src you keep all the .php-files.
 So, index.php, about.php etc.
