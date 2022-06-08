@@ -21,6 +21,8 @@ in the dist/ directory.
 You can out your stylesheets, scripts, etc.
 in the dist directory to begin with, then the .html files will be added by hyperStatic.
 
+### Usage
+
 Run ```php hyperstatic.php```
 
 Converts all .php files to .html.
