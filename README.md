@@ -25,7 +25,7 @@ in the `project_name/` directory.
 You can put your stylesheets, scripts, etc.
 in the `dist/` directory, they will be copied to the `project_name/` directory, where your .html-files will also be created.
 
-### the JSON-file(s)
+### the JSON-file
 Go to the Templating-section of this document to learn how to use the json-file.
 You don't have to use templating, and can leave it empty as so:
 
