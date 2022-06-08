@@ -14,7 +14,21 @@ $directory = new DirectoryIterator(getcwd());
 $raw_cwd = substr(getcwd(), 0, strrpos(getcwd(), "/"));
 $dist_cwd = $raw_cwd . "/dist"; 
 
-include('json.php');
+if(file_exists($raw_cwd . '/strings.json'))
+{
+	$json = json_decode(file_get_contents($raw_cwd . '/strings.json'), true);
+} else {
+	$json = [];
+}
+
+function hs($string)
+{
+	global $json;
+	if(array_key_exists($string, $json))
+	{
+		return $json[$string];
+	}
+}
 
 
 function isValidFile(SplFileInfo $file_info)

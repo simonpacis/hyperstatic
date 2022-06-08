@@ -403,7 +403,7 @@ setlocal nowrap
 setlocal wrapmargin=0
 wincmd w
 argglobal
-balt json.php
+balt hs
 let s:cpo_save=&cpo
 set cpo&vim
 imap <buffer> <C-N> <Plug>SparkupNext
@@ -540,21 +540,20 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 16 - ((15 * winheight(0) + 28) / 57)
+let s:l = 11 - ((10 * winheight(0) + 28) / 57)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 16
+keepjumps 11
 normal! 0
 wincmd w
 2wincmd w
 exe 'vert 1resize ' . ((&columns * 31 + 104) / 208)
 exe 'vert 2resize ' . ((&columns * 176 + 104) / 208)
 tabnext 1
-badd +7 json.php
-badd +17 hyperstatic.php
+badd +26 hyperstatic.php
 badd +1 .gitignore
-badd +1 README.md
+badd +11 README.md
 badd +1 hs
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
