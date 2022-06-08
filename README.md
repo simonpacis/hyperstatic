@@ -31,7 +31,7 @@ And it will convert all .php-files in `src/` to .html-files in `dist/`.
 It processes includes and all php-functions.
 
 Protip: Using a tool like [php-watcher](https://github.com/seregazhuk/php-watcher) is a great way to watch the src/-directory for changes, and run hyperStatic automatically.
-Use this oneline after you've installed php-watcher:
+Use this oneliner in your project directory after you've installed php-watcher:
 
 `php-watcher --watch .
 --watch src --ext=php,json hyperstatic.php`
