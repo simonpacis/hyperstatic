@@ -13,6 +13,8 @@ dist/
 src/
 
 In src you keep all the .php-files.
+So, index.php, about.php etc.
+etc.
 
 Run php hyperstatic.php
 
@@ -24,4 +26,3 @@ hyperStatic can insert strings of text into your files.
 
 ### Setup
 Create a file 
-
