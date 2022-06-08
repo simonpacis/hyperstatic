@@ -27,6 +27,9 @@ in the dist directory to begin with, then the .html files will be added by hyper
 
 The project_name.json can be 
 
+### the JSON-file
+
+
 ### Usage
 Drop the hyperstatic.php-file into your project directory.
 
