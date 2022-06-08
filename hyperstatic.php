@@ -1,4 +1,4 @@
-<?
+<?php
 
 /*
  *
@@ -9,7 +9,7 @@
  * */
 
 
-$directory = new DirectoryIterator(__DIR__);
+$directory = new DirectoryIterator(getcwd());
 
 function isValidFile(SplFileInfo $file_info)
 {
@@ -18,7 +18,7 @@ function isValidFile(SplFileInfo $file_info)
         && basename(__FILE__) !== $file_info->getBasename();
 }
 
-function parseFile(SplFileInfo $fileInfo)
+function parseFile(SplFileInfo $file_info)
 {
     ob_start();
     require_once $file_info->getBasename();
@@ -28,10 +28,16 @@ function parseFile(SplFileInfo $fileInfo)
     return $data;
 }
 
+if(!is_dir(getcwd(). "/dist"))
+{
+	mkdir(getcwd(). '/dist');
+}
+
+
 foreach ($directory as $file_info) {
     if (isValidFile($file_info)) {
         $data = parseFile($file_info);
-        $file = $file_info->getBasename('.php') . '.html';
-        file_put_contents($file, $data);
+        $file = "dist/" . $file_info->getBasename('.php') . '.html';
+        file_put_contents(getcwd() . "/" . $file, $data);
     }
 }
