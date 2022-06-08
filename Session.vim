@@ -540,12 +540,12 @@ setlocal wrap
 setlocal wrapmargin=0
 silent! normal! zE
 let &fdl = &fdl
-let s:l = 26 - ((17 * winheight(0) + 28) / 57)
+let s:l = 27 - ((18 * winheight(0) + 28) / 57)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 26
-normal! 058|
+keepjumps 27
+normal! 0
 wincmd w
 2wincmd w
 exe 'vert 1resize ' . ((&columns * 31 + 104) / 208)
