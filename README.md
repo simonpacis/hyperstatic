@@ -55,10 +55,7 @@ php-watcher --watch .
 hyperStatic can insert strings of text into your files.
 
 ### Setup
-Create a file called `strings.json` in the project directory.
-So, next to `dist/` and `src/`.
-
-In the strings.json you type strings of text that you want inserted in your html-documents.
+In your `project_name.json`-file you type strings of text that you want inserted in your html-documents.
 E.g.:
 
 ```json
