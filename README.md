@@ -10,7 +10,7 @@ Renders .php-files as .html-files.
 Have the following folder structure in your project directory:
 
 ```
-dist/
+assets/
 src/
 project_name.json
 ```
@@ -23,7 +23,7 @@ In `src/` you keep all your .php-files.
 These files will all be converted to index.html, about.html etc.
 in the `project_name/` directory.
 You can put your stylesheets, scripts, etc.
-in the `dist/` directory, they will be copied to the `project_name/` directory, where your .html-files will also be created.
+in the `assets/` directory, they will be copied to the `project_name/` directory, where your .html-files will also be created.
 
 ### the JSON-file
 Go to the Templating-section of this document to learn how to use the json-file.
@@ -38,7 +38,7 @@ Drop the hyperstatic.php-file into your project directory.
 
 Run `php hyperstatic.php`
 
-And it will convert all .php-files in `src/` to .html-files in `dist/`.
+And it will convert all .php-files in `src/` to .html-files in `project_name/`.
 It processes includes and all php-functions.
 
 Protip: Using a tool like [php-watcher](https://github.com/seregazhuk/php-watcher) is a great way to watch the src/-directory for changes, and run hyperStatic automatically.
@@ -79,7 +79,7 @@ Directories will be created for each one.
 Like so:
 
 ```
-dist/
+assets/
 src/
 project_name.json
 project_name/

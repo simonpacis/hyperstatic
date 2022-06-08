@@ -13,7 +13,7 @@
 //$raw_cwd = substr(getcwd(), 0, strrpos(getcwd(), "/"));
 $raw_cwd = getcwd();
 $src_cwd = $raw_cwd . "/src"; 
-$pure_dist_cwd = $raw_cwd . "/dist"; 
+$pure_dist_cwd = $raw_cwd . "/assets"; 
 $directory = new DirectoryIterator($src_cwd);
 $project_directory = new DirectoryIterator($raw_cwd);
 
