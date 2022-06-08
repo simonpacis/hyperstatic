@@ -15,6 +15,8 @@ src/
 project_name.json
 ```
 
+You can call project_name.json whatever you want, then a project_name directory will be created.
+
 In `src/` you keep all your .php-files.
 (So, index.php, about.php etc.)
 
@@ -22,6 +24,8 @@ These files will all be converted to index.html, about.html etc.
 in the `dist/` directory.
 You can out your stylesheets, scripts, etc.
 in the dist directory to begin with, then the .html files will be added by hyperStatic.
+
+The project_name.json can be 
 
 ### Usage
 Drop the hyperstatic.php-file into your project directory.
