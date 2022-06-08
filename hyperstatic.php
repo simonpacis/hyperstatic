@@ -9,10 +9,12 @@
  * */
 
 
-$directory = new DirectoryIterator(getcwd());
 
-$raw_cwd = substr(getcwd(), 0, strrpos(getcwd(), "/"));
+//$raw_cwd = substr(getcwd(), 0, strrpos(getcwd(), "/"));
+$raw_cwd = getcwd();
 $dist_cwd = $raw_cwd . "/dist"; 
+$src_cwd = $raw_cwd . "/src"; 
+$directory = new DirectoryIterator($src_cwd);
 
 if(file_exists($raw_cwd . '/strings.json'))
 {
@@ -59,8 +61,9 @@ function isValidFile(SplFileInfo $file_info)
 
 function parseFile(SplFileInfo $file_info)
 {
+	global $src_cwd;
     ob_start();
-    require_once $file_info->getBasename();
+    require_once $src_cwd . "/" . $file_info->getBasename();
     $data = ob_get_contents();
     ob_end_clean();
 
@@ -78,7 +81,7 @@ if(!is_dir($dist_cwd))
 foreach ($directory as $file_info) {
     if (isValidFile($file_info)) {
         $data = parseFile($file_info);
-        $file = "dist/" . $file_info->getBasename('.php') . '.html';
-        file_put_contents(substr(getcwd(), 0, strrpos( getcwd(), '/')) . "/" . $file, $data);
+        $file = $file_info->getBasename('.php') . '.html';
+        file_put_contents($dist_cwd . "/" . $file, $data);
     }
 }
