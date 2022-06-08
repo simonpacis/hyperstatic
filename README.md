@@ -11,3 +11,6 @@ Run php hyperstatic.php
 Converts all .php files to .html.
 Processes includes etc.
 
+## Templating
+hyperStatic can insert strings of text into your files.
+
