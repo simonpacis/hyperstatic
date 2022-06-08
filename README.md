@@ -1,4 +1,6 @@
 # hyperStatic 
+*Warning: This project is an idea under development.*
+
 Templating engine.
 Outputs .html files.
 
