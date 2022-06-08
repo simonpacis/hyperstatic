@@ -23,7 +23,7 @@ in the dist directory to begin with, then the .html files will be added by hyper
 
 ### Usage
 
-Run ```php hyperstatic.php```
+Run `php hyperstatic.php`
 
 Converts all .php files to .html.
 Processes includes etc.
