@@ -15,7 +15,7 @@ src/
 project_name.json
 ```
 
-You can call project_name.json whatever you want, then a project_name directory will be created.
+You can call `project_name.json` whatever you want, then a `project_name` directory will be created.
 
 In `src/` you keep all your .php-files.
 (So, index.php, about.php etc.)
