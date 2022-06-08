@@ -44,3 +44,5 @@ In your .php-files you type
 <?= hs('json_key_here') ?>
 
 ```
+
+And the text in the 'json_key_here' entry in strings.json will be outputted in your .html-file.
