@@ -14,9 +14,9 @@ dist/
 src/
 ```
 
-In `src/` you keep all the .php-files.
-So, index.php, about.php etc.
-etc.
+In `src/` you keep all your .php-files.
+(So, index.php, about.php etc.
+etc.)
 
 These files will all be converted to index.html, about.html etc.
 in the `dist/` directory.
