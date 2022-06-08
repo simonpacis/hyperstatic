@@ -23,6 +23,7 @@ You can out your stylesheets, scripts, etc.
 in the dist directory to begin with, then the .html files will be added by hyperStatic.
 
 ### Usage
+Drop the hyperstatic.php-file into your project directory.
 
 Run `php hyperstatic.php`
 
