@@ -72,6 +72,22 @@ In your .php-files you type
 
 And the text in the 'json_key_here' entry in strings.json will be outputted in your .html-file.
 
+### Multi-JSON
+If you want to generate multiple versions of your site with a different .json-file for each (for e.g.
+multiple languages), simply create multiple .json-files and populate them.
+Directories will be created for each one.
+Like so:
+
+```
+dist/
+src/
+project_name.json
+project_name/
+project_name_en.json
+project_name_en/
+```
+
+
 ### Functions
 Functions relating to the templating engine are prefixed with "hs" - except for the output-function which is just hs().
 
