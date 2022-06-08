@@ -1,8 +1,8 @@
 # hyperStatic 
-*Warning: This project is an idea under development.*
 
-Templating engine.
-Outputs .html files.
+Hyper-minimal PHP static file templating engine
+
+Renders .php-files as .html-files.
 
 ## To use
 
