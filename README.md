@@ -22,8 +22,8 @@ In `src/` you keep all your .php-files.
 
 These files will all be converted to index.html, about.html etc.
 in the `project_name/` directory.
-You can out your stylesheets, scripts, etc.
-in the dist directory to begin with, then the .html files will be added by hyperStatic.
+You can put your stylesheets, scripts, etc.
+in the `dist/` directory, they will be copied to the `project_name/` directory, where your .html-files will also be created.
 
 The project_name.json can be 
 
