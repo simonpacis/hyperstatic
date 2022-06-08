@@ -30,6 +30,8 @@ Run `php hyperstatic.php`
 And it will convert all .php-files in `src/` to .html-files in `dist/`.
 It processes includes and all php-functions.
 
+Protip: Using a tool like [php-watcher](https://github.com/seregazhuk/php-watcher) is a great way to watch the src/-directory for changes, and run hyperStatic automatically.
+
 ## Templating
 hyperStatic can insert strings of text into your files.
 

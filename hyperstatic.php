@@ -30,7 +30,7 @@ function hs($string)
 	}
 }
 
-function hscontains($string)
+function hscontains($string, $sort = false)
 {
 	global $json;
 	$js_contains = [];
@@ -40,6 +40,11 @@ function hscontains($string)
 		{
 			$js_contains[$key] = $json_string;
 		}
+	}
+
+	if($sort)
+	{
+		ksort($js_contains);
 	}
 	return $js_contains;
 }
