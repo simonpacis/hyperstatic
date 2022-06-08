@@ -27,8 +27,8 @@ Drop the hyperstatic.php-file into your project directory.
 
 Run `php hyperstatic.php`
 
-And it will convert all .php files in `src/` to .html in `dist/`.
-Processes includes etc.
+And it will convert all .php-files in `src/` to .html-files in `dist/`.
+It processes includes and all php-functions.
 
 ## Templating
 hyperStatic can insert strings of text into your files.
