@@ -12,7 +12,7 @@ Have the following folder structure in your project directory:
 dist/
 src/
 
-In
+In src you keep all the .php-files.
 
 Run php hyperstatic.php
 
