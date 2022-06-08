@@ -36,7 +36,7 @@ Use this oneliner in your project directory after you've installed php-watcher:
 ```
 php-watcher --watch .
 --watch src --ext=php,json hyperstatic.php
-````
+```
 
 ## Templating
 hyperStatic can insert strings of text into your files.
