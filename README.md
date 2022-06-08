@@ -56,3 +56,17 @@ In your .php-files you type
 ```
 
 And the text in the 'json_key_here' entry in strings.json will be outputted in your .html-file.
+
+### Functions
+Functions relating to the templating engine are prefixed with "hs" - except for the output-function which is just hs().
+
+#### hs()
+Outputs corresponding key in strings.json.
+
+```php
+
+hs($key);
+
+```
+
+### hscontains()

@@ -30,6 +30,20 @@ function hs($string)
 	}
 }
 
+function hscontains($string)
+{
+	global $json;
+	$js_contains = [];
+	foreach($json as $key => $json_string)
+	{
+		if(strpos($key, $string) !== false)
+		{
+			$js_contains[$key] = $json_string;
+		}
+	}
+	return $js_contains;
+}
+
 
 function isValidFile(SplFileInfo $file_info)
 {
