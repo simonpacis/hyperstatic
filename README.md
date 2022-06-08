@@ -41,7 +41,7 @@ E.g.:
 
 ```json
 {
-  "index.heading_1": "Hej med dig."
+  "json_key_here": "This text will be outputted in the html-file."
 }
 ```
 
