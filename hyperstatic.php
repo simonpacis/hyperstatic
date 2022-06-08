@@ -11,6 +11,12 @@
 
 $directory = new DirectoryIterator(getcwd());
 
+$raw_cwd = substr(getcwd(), 0, strrpos(getcwd(), "/"));
+$dist_cwd = $raw_cwd . "/dist"; 
+
+include('json.php');
+
+
 function isValidFile(SplFileInfo $file_info)
 {
     return $file_info->isFile()
@@ -28,9 +34,11 @@ function parseFile(SplFileInfo $file_info)
     return $data;
 }
 
-if(!is_dir(getcwd(). "/dist"))
+
+
+if(!is_dir($dist_cwd))
 {
-	mkdir(getcwd(). '/dist');
+	mkdir($dist_cwd);
 }
 
 
@@ -38,6 +46,6 @@ foreach ($directory as $file_info) {
     if (isValidFile($file_info)) {
         $data = parseFile($file_info);
         $file = "dist/" . $file_info->getBasename('.php') . '.html';
-        file_put_contents(getcwd() . "/" . $file, $data);
+        file_put_contents(substr(getcwd(), 0, strrpos( getcwd(), '/')) . "/" . $file, $data);
     }
 }

@@ -11,5 +11,3 @@ Run php hyperstatic.php
 Converts all .php files to .html.
 Processes includes etc.
 
-## Roadmap
-
