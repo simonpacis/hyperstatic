@@ -14,12 +14,12 @@ dist/
 src/
 ```
 
-In src you keep all the .php-files.
+In `src/` you keep all the .php-files.
 So, index.php, about.php etc.
 etc.
 
 These files will all be converted to index.html, about.html etc.
-in the dist/ directory.
+in the `dist/` directory.
 You can out your stylesheets, scripts, etc.
 in the dist directory to begin with, then the .html files will be added by hyperStatic.
 
