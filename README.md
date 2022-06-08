@@ -70,3 +70,8 @@ hs($key);
 ```
 
 ### hscontains()
+Returns an array of entries which keys contain the given string.
+
+```php
+
+
