@@ -73,5 +73,15 @@ hs($key);
 Returns an array of entries which keys contain the given string.
 
 ```php
+hscontains($key);
+```
+
+So, a json-file with the entries "navigation.first" and "navigation.second" will both be returned if the function is run as follows:
+
+```php
+
+hscontains('navigation');
+
+```
 
 
