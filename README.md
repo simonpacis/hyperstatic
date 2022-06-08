@@ -39,6 +39,11 @@ So, next to `dist/` and `src/`.
 In the strings.json you type strings of text that you want inserted in your html-documents.
 E.g.:
 
+```json
+{
+  "index.heading_1": "Hej med dig."
+}
+```
 
 ### Usage
 In your .php-files you type
