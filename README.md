@@ -36,6 +36,8 @@ hyperStatic can insert strings of text into your files.
 Create a file called `strings.json` in the project directory.
 So, next to `dist/` and `src/`.
 
+In the strings.json you type strings of text that you want inserted in your html-documents.
+
 ### Usage
 In your .php-files you type
 
