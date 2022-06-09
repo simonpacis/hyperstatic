@@ -46,6 +46,16 @@ function hscontains($string, $sort = false)
 	return $js_contains;
 }
 
+function hsexists($string)
+{
+	if(array_key_exists($string, $json))
+	{
+		return true;
+	} else {
+		return false;
+	}
+}
+
 
 function isValidFile(SplFileInfo $file_info)
 {

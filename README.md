@@ -116,4 +116,10 @@ hscontains('navigation');
 
 ```
 
+### hsexists()
+Returns true if the key exists in the json-file.
+```php
+hsexists($key);
+```
+
 
