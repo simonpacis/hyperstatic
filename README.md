@@ -93,8 +93,8 @@ If you generate multiple sites, you can put assets in a subdirectory called the 
 Like so:
 
 ```
-assets/project_name/app.js
 assets/
+assets/project_name/app.js
 project_name.json
 project_name/
 project_name_en.json
