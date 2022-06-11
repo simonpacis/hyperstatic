@@ -23,7 +23,7 @@ In `src/` you keep all your .php-files.
 These files will all be converted to index.html, about.html etc.
 in a directory called `dist/project_name/`.
 You can put your stylesheets, scripts, etc.
-in the `assets/` directory, they will be copied to the `project_name/` directory, where your .html-files will also be created.
+in the `assets/` directory, they will be copied to the `dist/project_name/` directory, where your .html-files will also be created.
 
 
 ### the JSON-file
