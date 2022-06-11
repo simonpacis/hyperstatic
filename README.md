@@ -94,6 +94,8 @@ foreach(hs('json_array') as $key => $value)
 }
 ```
 
+The sky's the limit, use all of php with hyperStatic.
+
 ### Multi-JSON
 If you want to generate multiple versions of your site with a different .json-file for each (for e.g.
 multiple languages), simply create multiple .json-files and populate them.
