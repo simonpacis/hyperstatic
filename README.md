@@ -25,6 +25,7 @@ in the `project_name/` directory.
 You can put your stylesheets, scripts, etc.
 in the `assets/` directory, they will be copied to the `project_name/` directory, where your .html-files will also be created.
 
+
 ### the JSON-file
 Go to the Templating-section of this document to learn how to use the json-file.
 You don't have to use templating, and can leave it empty as so:
@@ -88,6 +89,19 @@ project_name_en.json
 project_name_en/
 ```
 
+If you generate multiple sites, you can put assets in a subdirectory called the project_name, and those will only be copied to that outputted site.
+Like so:
+
+```
+assets/project_name/app.js
+assets/
+project_name.json
+project_name/
+project_name_en.json
+project_name_en/
+```
+
+The app.js will only show up in `dist/project_name/app.js` and not in `dist/project_name_en`.
 
 ### Functions
 Functions relating to the templating engine are prefixed with "hs" - except for the output-function which is just hs().

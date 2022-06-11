@@ -10,9 +10,9 @@
 
 
 
-//$raw_cwd = substr(getcwd(), 0, strrpos(getcwd(), "/"));
 $raw_cwd = getcwd();
 $src_cwd = $raw_cwd . "/src"; 
+$raw_dist_cwd = $raw_cwd . "/dist"; 
 $pure_dist_cwd = $raw_cwd . "/assets"; 
 $directory = new DirectoryIterator($src_cwd);
 $project_directory = new DirectoryIterator($raw_cwd);
@@ -75,12 +75,17 @@ function parseFile(SplFileInfo $file_info)
 	return $data;
 }
 
+if(!is_dir($raw_dist_cwd))
+{
+	mkdir($raw_dist_cwd);
+}
+
 foreach($project_directory as $file_info)
 {
 	if($file_info->getExtension() == "json")
 	{
 		$json = json_decode(file_get_contents($raw_cwd . '/' . $file_info->getBasename()), true);
-		$dist_cwd = $raw_cwd . "/" . $file_info->getBasename('.json'); 
+		$dist_cwd = $raw_dist_cwd . "/" . $file_info->getBasename('.json'); 
 
 
 		if(!is_dir($dist_cwd))
@@ -89,6 +94,12 @@ foreach($project_directory as $file_info)
 		}
 
 		shell_exec("cp -r $pure_dist_cwd/ $dist_cwd");
+
+		if(is_dir($pure_dist_cwd . "/" . $file_info->getBasename('.json')))
+		{
+			shell_exec("cp -r ".$pure_dist_cwd."/".$file_info->getBasename('.json')."/ ".$dist_cwd);
+		}
+
 
 
 		foreach ($directory as $file_info) {
