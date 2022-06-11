@@ -107,7 +107,7 @@ dist/project_name_en
 src/
 ```
 
-The app.js will only show up in `dist/project_name/app.js` and not in `dist/project_name_en`.
+The `assets/project_name/app.js` will only show up in `dist/project_name/app.js` and not in `dist/project_name_en`.
 
 ### Functions
 Functions relating to the templating engine are prefixed with "hs" - except for the output-function which is just hs().
