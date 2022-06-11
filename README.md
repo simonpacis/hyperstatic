@@ -84,9 +84,7 @@ Like so:
 assets/
 src/
 project_name.json
-project_name/
 project_name_en.json
-project_name_en/
 ```
 
 If you generate multiple sites, you can put assets in a subdirectory in `assets` called the project_name, and those will only be copied to that outputted site.
@@ -96,9 +94,17 @@ Like so:
 assets/
 assets/project_name/app.js
 project_name.json
-project_name/
 project_name_en.json
-project_name_en/
+```
+
+This will generate the following folder structure:
+
+```
+assets/
+dist/
+dist/project_name
+dist/project_name_en
+src/
 ```
 
 The app.js will only show up in `dist/project_name/app.js` and not in `dist/project_name_en`.
