@@ -74,6 +74,9 @@ In your .php-files you type
 
 And the text in the 'json_key_here' entry in strings.json will be outputted in your .html-file.
 
+Don't limit yourself to strings thought.
+Arrays, objects, booleans, integers etc can all be written in the json-file and will be returned by the hs function.
+
 ### Multi-JSON
 If you want to generate multiple versions of your site with a different .json-file for each (for e.g.
 multiple languages), simply create multiple .json-files and populate them.
