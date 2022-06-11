@@ -89,7 +89,7 @@ project_name_en.json
 project_name_en/
 ```
 
-If you generate multiple sites, you can put assets in a subdirectory called the project_name, and those will only be copied to that outputted site.
+If you generate multiple sites, you can put assets in a subdirectory in `assets` called the project_name, and those will only be copied to that outputted site.
 Like so:
 
 ```
