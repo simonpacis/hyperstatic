@@ -48,6 +48,7 @@ function hscontains($string, $sort = false)
 
 function hsexists($string)
 {
+	global $json;
 	if(array_key_exists($string, $json))
 	{
 		return true;
