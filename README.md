@@ -131,6 +131,38 @@ src/
 
 The `assets/project_name/app.js` will only show up in `dist/project_name/app.js` and not in `dist/project_name_en`.
 
+### Components
+You can create reusable components that are easily called from the code, and that you can easily pass variables from JSON onto.
+
+#### Creating a component
+Create a .php-file in your `src` directory.
+You could create a subdirectory like `src/components`, and create it there.
+
+Here's an example of a paragraph component.
+This code is in a file placed in `src/components/p.php`, and contains the following code:
+
+```php
+<p class><?= hscv(); ?></p>
+```
+
+`hscv()` echoes the passed variable, and is short for hyperStatic Component Variable.
+
+#### Printing a component
+In `src/index.php` we want to call the new paragraph component to use it, and we do it as such:
+
+```php
+<?php hsc('index.paragraph', 'components/p.php'); ?>
+```
+
+This will automatically pass the 'index.paragraph' key to the p.php-component, where hscv() will print it out.
+In our instance the key contains "Hello World".
+The resulting HTML will be:
+
+```html
+
+
+```
+
 ### Functions
 Functions relating to the templating engine are prefixed with "hs" - except for the output-function which is just hs().
 

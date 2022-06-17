@@ -16,6 +16,7 @@ $raw_dist_cwd = $raw_cwd . "/dist";
 $pure_dist_cwd = $raw_cwd . "/assets"; 
 $directory = new DirectoryIterator($src_cwd);
 $project_directory = new DirectoryIterator($raw_cwd);
+$data = null;
 
 
 function hs($string)
@@ -57,6 +58,50 @@ function hsexists($string)
 	}
 }
 
+function hsc($string, $component)
+{
+	global $json, $src_cwd, $data;
+
+	$GLOBALS['data'] = hs($string);
+	return include($src_cwd . "/" .  $component); 
+
+}
+
+function hscv($variable = "data")
+{
+	return $GLOBALS[$variable];
+}
+
+$has_rsync = null;
+function copyDirectory($src, $dest, $exclude = "")
+{
+	global $has_rsync;
+	if($has_rsync == null)
+	{
+		if(shell_exec("command -v rsync"))
+		{
+			$has_rsync = true;
+		} else {
+			$has_rsync = false;
+		}
+	}
+
+	if($has_rsync)
+	{
+		if($exclude != "")
+		{
+			shell_exec("rsync -r --exclude '".$exclude."' '". $src ."' '". $dest."'");
+		} else {
+			shell_exec("rsync -r ". $src ." ". $dest);
+		}
+	} else {
+		shell_exec("cp -r ". $src ." ". $dest);
+	}
+
+
+
+
+}
 
 function isValidFile(SplFileInfo $file_info)
 {
@@ -94,12 +139,16 @@ foreach($project_directory as $file_info)
 			mkdir($dist_cwd);
 		}
 
-		shell_exec("cp -r $pure_dist_cwd/ $dist_cwd");
 
 		if(is_dir($pure_dist_cwd . "/" . $file_info->getBasename('.json')))
 		{
-			shell_exec("cp -r ".$pure_dist_cwd."/".$file_info->getBasename('.json')."/ ".$dist_cwd);
+			copyDirectory($pure_dist_cwd . "/", $dist_cwd, "/" . $file_info->getBasename('.json'));
+			copyDirectory($pure_dist_cwd."/".$file_info->getBasename('.json')."/", $dist_cwd);
+		} else {
+			copyDirectory($pure_dist_cwd . "/", $dist_cwd);
 		}
+
+
 
 
 
