@@ -142,7 +142,7 @@ Here's an example of a paragraph component.
 This code is in a file placed in `src/components/p.php`, and contains the following code:
 
 ```php
-<p class><?= hscv(); ?></p>
+<p class="paragraph"><?= hscv(); ?></p>
 ```
 
 `hscv()` echoes the passed variable, and is short for hyperStatic Component Variable.
@@ -159,7 +159,7 @@ In our instance the key contains "Hello World".
 The resulting HTML will be:
 
 ```html
-
+<p class="paragraph">Hello World</p>
 
 ```
 
@@ -196,4 +196,17 @@ Returns true if the key exists in the json-file.
 hsexists($key);
 ```
 
+### hsc()
+Returns a hyperStatic component.
 
+```php
+hsc($key, $component)
+```
+
+### hscv()
+Used inside a hyperStatic component.
+Echoes the component variable.
+
+```php
+hsc()
+```
