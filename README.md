@@ -131,6 +131,17 @@ src/
 
 The `assets/project_name/app.js` will only show up in `dist/project_name/app.js` and not in `dist/project_name_en`.
 
+
+#### Limiting pages for certain versions
+Create a "pages"-entry in the json-file, and type in which .php-files you want converted for this given version.
+Like so:
+
+```json
+"pages": ["index.php", "about.php"],
+```
+
+And only those .php-files will be converted for that given version.
+
 ### Components
 You can create reusable components that are easily called from the code, and that you can easily pass variables from JSON onto.
 

@@ -148,15 +148,32 @@ foreach($project_directory as $file_info)
 			copyDirectory($pure_dist_cwd . "/", $dist_cwd);
 		}
 
+		if(array_key_exists("pages", $json))
+		{
+			foreach($directory as $file_info)
+			{
+				if(isValidFile($file_info))
+				{
+					if(in_array($file_info->getBasename(), $json['pages']))
+					{
+						$data = parseFile($file_info);
+						$file = $file_info->getBasename('.php') . '.html';
+						file_put_contents($dist_cwd . "/" . $file, $data);
+					}
+				}
+			}
+			foreach($json['pages'] as $page)
+			{
+				
+			}
 
-
-
-
-		foreach ($directory as $file_info) {
-			if (isValidFile($file_info)) {
-				$data = parseFile($file_info);
-				$file = $file_info->getBasename('.php') . '.html';
-				file_put_contents($dist_cwd . "/" . $file, $data);
+		} else { // Convert all .php-files found.
+			foreach ($directory as $file_info) {
+				if (isValidFile($file_info)) {
+					$data = parseFile($file_info);
+					$file = $file_info->getBasename('.php') . '.html';
+					file_put_contents($dist_cwd . "/" . $file, $data);
+				}
 			}
 		}
 	}
