@@ -114,7 +114,7 @@ function parseFile(SplFileInfo $file_info)
 {
 	global $src_cwd;
 	ob_start();
-	require_once $src_cwd . "/" . $file_info->getBasename();
+	include $src_cwd . "/" . $file_info->getBasename();
 	$data = ob_get_contents();
 	ob_end_clean();
 
@@ -161,10 +161,6 @@ foreach($project_directory as $file_info)
 						file_put_contents($dist_cwd . "/" . $file, $data);
 					}
 				}
-			}
-			foreach($json['pages'] as $page)
-			{
-				
 			}
 
 		} else { // Convert all .php-files found.
