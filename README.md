@@ -188,9 +188,10 @@ hs($key);
 
 ### hscontains()
 Returns an array of entries which keys contain the given string.
+If second parameter is set to true they will be sorted with ksort.
 
 ```php
-hscontains($key);
+hscontains($key, $sort = false);
 ```
 
 So, a json-file with the entries "navigation.first" and "navigation.second" will both be returned if the function is run as follows:
