@@ -174,51 +174,5 @@ The resulting HTML will be:
 
 ```
 
-### Functions
-Functions relating to the templating engine are prefixed with "hs" - except for the output-function which is just hs().
-
-#### hs()
-Outputs corresponding key in strings.json.
-
-```php
-
-hs($key);
-
-```
-
-### hscontains()
-Returns an array of entries which keys contain the given string.
-If second parameter is set to true they will be sorted with ksort.
-
-```php
-hscontains($key, $sort = false);
-```
-
-So, a json-file with the entries "navigation.first" and "navigation.second" will both be returned if the function is run as follows:
-
-```php
-
-hscontains('navigation');
-
-```
-
-### hsexists()
-Returns true if the key exists in the json-file.
-```php
-hsexists($key);
-```
-
-### hsc()
-Returns a hyperStatic component.
-
-```php
-hsc($key, $component)
-```
-
-### hscv()
-Used inside a hyperStatic component.
-Echoes the component variable.
-
-```php
-hsc()
-```
+### Documentation
+Documentation can be accessed at [https://simonpacis.github.io/hyperstatic/](https://simonpacis.github.io/hyperstatic/).
