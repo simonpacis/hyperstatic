@@ -1,3 +1,5 @@
 hs
 .wlmain
 Session.vim
+.phpdoc
+*.swp
